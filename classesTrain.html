@@ -109,26 +109,132 @@
       }
       
       guess() {
-        return (this.range[1]-this.range[0])/2
+        return Math.round((this.range[1]+this.range[0])/2)
+      }
+      lower() {
+        if (this.guess() > number ) {
+          this.setRange(this.range[0], this.guess())
+        }
+        console.log(game.range)
+      }
+      
+      greater() {
+        if (this.guess() < number ) {
+          this.setRange(this.guess(),this.range[1])
+        }
+        console.log(game.range)
       }
       
     }
 		
 		
 		
-		const number = 409;
+		const number = 279;
     const game = new GG();
-    game.setRange(0, 4048)
+    game.setRange(0, 3445)
 		
 		
-		console.log(game.range);
+	/*	console.log(game.range);
     
     console.log(game.guess());
-    
+   
     console.log(game);
-		
-		
-		
+    
+		game.lower();
+		console.log(game.range);
+		game.greater();
+    console.log(game.range);
+    */
+    
+    /*
+    let result = game.guess();     //2024
+    console.log(result);
+        game.lower();     //[0, 2024]
+    
+        result = game.guess();    // 1012
+        console.log(result);
+    
+        game.lower();   //  [0, 1012]
+    
+        result = game.guess(); //506
+        console.log(result);
+    
+        game.lower();   //[0, 506]
+    
+        result = game.guess();  //253
+        console.log(result);
+    
+        game.greater();  //[253, 506]
+    
+        result = game.guess();   //379.5  ??
+        console.log(result);
+    
+        game.greater();  //[379.5, 506]
+    
+        result = game.guess();  //442.75
+        console.log(result);
+    
+        game.lower();  //[379.5, 442.75]
+    
+        result = game.guess();  //411.125
+        console.log(result);
+    
+        game.lower(); //[379.5, 411.125]
+    
+        result = game.guess();  //395.3125
+        console.log(result);
+    
+        game.greater();  //[395.3125, 411.125]
+    
+        result = game.guess(); //403.21875
+        console.log(result);
+    
+        game.greater();  //[403.21875, 411.125]
+    
+        result = game.guess();  //407.171875
+        console.log(result);
+    
+        game.greater();  //[407.171875, 411.125]
+    
+        result = game.guess();  //409.1484375
+        console.log(result);
+    
+        game.lower(); //[407.171875, 409.1484375]
+    
+        result = game.guess(); //408.16015625
+        console.log(result);
+    
+    
+    
+    
+    console.log(result);
+    */
+    
+    
+    let result = game.guess();
+        game.lower();
+        result = game.guess();
+        game.lower();
+        result = game.guess();
+        game.lower();
+        result = game.guess();
+        game.greater();
+        result = game.guess();
+        game.lower();
+        result = game.guess();
+        game.greater();
+        result = game.guess();
+        game.lower();
+        result = game.guess();
+        game.lower();
+        result = game.guess();
+        game.greater();
+        result = game.guess();
+        game.lower();
+        result = game.guess();
+    console.log(result);
+    
+    
 	</script>
 </body>
 </html>
