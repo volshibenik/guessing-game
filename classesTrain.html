@@ -57,6 +57,46 @@
 		s.sayName();
 		console.log(s.area);
 		
+		
+		class User {
+			constructor (first, last) {
+				this.name = first;
+				this.surname = last;
+			}
+			get fullName() {
+				return `${this.name} ${this.surname}`;
+			}
+			
+			set full (newName) {    // may have differ from getter
+				[this.name, this.surname] = newName.split(' '); //not first last as i thought
+			}
+		}
+		
+		console.log(User);
+		var sergey = new User ('Sergey', 'Sae');
+		console.log(sergey);
+		
+		console.log(sergey.fullName);
+		
+		sergey.full = "Sergey theGreat"
+		console.log(sergey.fullName);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	</script>
 </body>
 </html>
