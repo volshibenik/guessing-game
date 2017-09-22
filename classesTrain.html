@@ -70,6 +70,14 @@
 			set full (newName) {    // may have differ from getter
 				[this.name, this.surname] = newName.split(' '); //not first last as i thought
 			}
+      namerize(e) {
+        this.name = e;
+      }
+      
+      kk (g) {
+        this.namerize(g)
+      }
+      
 		}
 		
 		console.log(User);
@@ -80,20 +88,44 @@
 		
 		sergey.full = "Sergey theGreat"
 		console.log(sergey.fullName);
+    sergey.namerize('Leo')
+		
+		console.log(sergey.name);
+    
+    sergey.kk('Abi')
+		
+		console.log(sergey.name);
+		
+		console.log('____----____');
+    
+		class GG {
+      
+      constructor () {
+   //     this.range = [0,0];
+      }
+      
+      setRange (min, max) {
+        this.range = [min,max]
+      }
+      
+      guess() {
+        return (this.range[1]-this.range[0])/2
+      }
+      
+    }
 		
 		
 		
+		const number = 409;
+    const game = new GG();
+    game.setRange(0, 4048)
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		console.log(game.range);
+    
+    console.log(game.guess());
+    
+    console.log(game);
 		
 		
 		
