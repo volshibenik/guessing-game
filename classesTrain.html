@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		class Polygon {
+			constructor (width, height) {
+				this.width = width;
+				this.height = height;
+				this.name = 'Poly';
+			}
+			
+			sayName () {
+				console.log('Hi, my name is '+ this.name + '!');
+			}
+			sayHistory () {
+				console.log('Polygon is from greek and means many angles');
+			}
+		}
+		let p = new Polygon (300, 400);
+		p.sayName();
+		console.log(p.width);
+		p.sayHistory();
+		
+		
+		
+		const MyPoly = class Polya {
+			getPolyName() {
+				console.log('Hi. I was created with a Class expression. My name is ' +
+													Polya.name);
+			}
+		};
+
+		let inst = new MyPoly();
+		inst.getPolyName();
+		
+		
+		class Square extends Polygon {
+			constructor (length) {
+				super (length, length);
+				this.name = 'Squa';
+			}
+			
+			get area () {
+				return this.height * this.width;
+			}
+			
+			set area (val) {
+				this.area = val;
+			}
+		}
+		
+		let s = new Square (5);
+		s.sayName();
+		console.log(s.area);
+		
+	</script>
+</body>
+</html>
